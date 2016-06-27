@@ -47,6 +47,22 @@
             .top-menu-stuff > ul {
                 padding-left: 20px;
             }
+            .links {
+                position: static;
+                padding-left: 0px;
+                left: 0px;
+            }
+        }
+        
+        @media only screen and (min-width: 600px) {
+            .content,
+            .top-menu-stuff {
+                width: 500px;
+            }
+            .links {
+                position: relative;
+                left: 110px;
+            }
         }
         
         body {
@@ -56,13 +72,11 @@
         }
         
         .content {
-            width: 400px;
             margin: auto;
         }
         
         .top-menu-stuff {
             padding-top: 40px;
-            width: 400px;
             margin: auto;
         }
         
@@ -181,4 +195,5 @@
     <div class="stupid-footer-that-should-not-need-to-exist">Copyright Ben Sammons 2016</div>
 </body>
 <script src="/goog.js" defer></script>
+
 </html>
