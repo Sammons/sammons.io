@@ -1,5 +1,10 @@
 {
 	"name": "sammons.io",
+	"images": [
+		{
+			"src":"\/prof2.jpg"
+		}
+	],
 	"icons": [
 		{
 			"src": "\/android-chrome-36x36.png",

@@ -2,6 +2,7 @@ sammonsio:
     image: sammons/sammonsio
     volumes:
         - .:/data/logs
+        - ./static:/data/nginx/static
     ports:
         - "8080:80"
     environment:
