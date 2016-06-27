@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -19,30 +20,156 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cabin" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>sammons.io</title>
-    <style>
+    <style media="">
         body {
-            width: 500px;
+            color: #444444;
+            background-color: #EDFCFE;
+            font-family: Cabin;
+        }
+        
+        .content {
+            width: 400px;
             margin: auto;
-            padding-top: 30px;
+        }
+        
+        .top-menu-stuff {
+            padding-top: 20px;
+            max-width: 400px;
+            margin: auto;
+            align-content: center;
+        }
+        
+        .links {
+            display: inline-block;
+        }
+        
+        .links > ul {
+            list-style: none;
+        }
+        
+        .links > li {
+            display: inline-block;
+        }
+        
+        .name {
+            display: inline-block;
+        }
+        
+        .hello {
+            text-align: center;
+        }
+        
+        .statement {
+            text-justify: distribute-all-lines;
+            text-align: justify;
+        }
+        
+        a:visited {
+            color: #998c8c;
+        }
+        
+        a:hover {
+            color: #1516EF;
+            cursor: pointer;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        h1 {
+            font-family: Cabin;
+            color: #333333;
+            font-size: 24px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 26.4px;
+            letter-spacing: 1px;
+        }
+        
+        h3 {
+            font-family: Cabin;
+            color: #333333;
+            font-size: 18px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 15.4px;
+            letter-spacing: 1px;
+        }
+        
+        p {
+            font-family: Cabin;
+            color: #444444;
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 1px;
+        }
+        
+        blockquote {
+            font-family: Cabin;
+            color: #444444;
+            font-size: 21px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 1px;
+        }
+        
+        pre {
+            font-family: Cabin;
+            color: #444444;
+            font-size: 13px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 18.5714px;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 
 <body>
-    <h2>Something truly horrible has happened. Sorry.</h2>
-    <br/>
-    <h3>In the meantime view:</h3>
-    <ul>
-        <li><a href="https://github.com/sammons">github</a></li>
-        <li><a href="https://www.linkedin.com/in/ben-sammons-75603772">linkedin</a></li>
-        <li><a href="http://blog.sammons.io/">blog</a></li>
-        <li><a href="https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg">a cat</a></li>
-    </ul>
-    <br>
-    <div>
-        Or email Ben Sammons at <a href="mailto:ben+web@sammons.io">ben@sammons.io</a>
+    <div class="top-menu-stuff">
+        <h3 class="name">Benjamin D. Sammons</h3>
+        <ul class="links">
+            <li><a href="https://github.com/sammons">Code</a></li>
+            <li></li>
+            <li></li>
+            <li><a href="http://blog.sammons.io/">Blog</a></li>
+            <li></li>
+            <li></li>
+            <li><a href="https://www.linkedin.com/in/ben-sammons-75603772">Contact</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="hello">
+            <h2>Hello!</h2>
+        </div>
+        <div class="statement">
+            <p>
+                My name is Ben Sammons and I love building software that enhances and streamlines existing business processes. Many
+                people go to work every day to suffer the inadequacies of software they are required to use, or lack of software
+                altogether. I am focusing my career on combatting this problem.
+            </p>
+            <p>I believe in empowering people to achieve amazing things never previously possible, not replacing them with software.</p>
+            <p>
+                Right now I am living this dream building <a href="https://hyperfish.com">Hyperfish</a> in Kirkland, WA.
+            </p>
+
+            <br>
+            <div>
+                Or email Ben Sammons at <a href="mailto:ben+web@sammons.io">ben@sammons.io</a>
+            </div>
+        </div>
     </div>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
