@@ -1,9 +1,18 @@
 sammonsio:
     image: sammons/sammonsio
-    volumes:
-        - .:/data/logs
-        - ./static:/data/nginx/static
     ports:
         - "8080:80"
+        - "4443:443"
+    volumes:
+        - .:/data/logs
+    volumes_from:
+        - setter
+
+setter:
+    image: sammons/setter:latest
+    volumes:
+        - .:/data/variables
     environment:
-        - NGINX_PORT=80
+        vars: private_key=/data/variables/sammons.io.key, certs=/data/variables/sammons.io.crt
+        private_key: '-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEA4KgIEUtyxD7zWADHZhVTWjE+qhdQPpSGWXbo1aCCqhXlJaCM\ng7pfEbf8HKookIYa99f80sUTgnWWhehWNJJe7YNB2Rf893G/gTFOTP/55SCMZFgr\nxm4zEOTMkE8ivtz0y4+v6spGi4EkKkThAgJxE64M+skXHEjSrxb7OO3HAa22N+n0\nsiEeTcq9QMVxbJSJUvqwtDPnn8W4p+6KNxCv8VsOy3IWGO1k+PB3Nbgn/O4oxy4u\nnJnX5kcBQ+ntKvpezhMwsyVwSjNDNKSFTkwjYiC+DPtfnhnRqB6sBhhPS7feQSgV\n6RSF6cJUs0sma8gyMzJivA5DsLuJFkgaC+WCEQIDAQABAoIBAQCj304LN4rexcCB\n2AebWkDz0GoSbnEVRQf/KHLMqYnGgbQlz0fQKtmANkHLsv9l9LylP0Lnh+QkTJvg\nz8paDM7717vnnMzkvm9f0NR57FqfnS9rXrmHxAix8QOa3G7O5KQX/Jbo4GW3CxuT\nTa0H5zoOje5f3OFju2cbWtsj+qYofO1CUTtekLmGOJNupynQgdVsmH0IiMGz+yjo\nIPSB1WE4WaQxecnvOVdNm5CadkFsbNjpE21e5JwFd9YDsMerX+ZQhP6Kujoolt/m\nHBfLE38bVRjfNYvsjYfcE0YSKI1yAPNtXQGDRFw9vXVeIIebC0Uo6UywPMXmCHS1\nkepN310xAoGBAPLVzf36dLIjUksWXxP4O8dLFduYJTgsUVBjmenqekIHqxg3vJvp\nraYmXGN6IPl+iFBa4Le+yWzDkgXfjnE9yc8WL66tX0mEQ7udDLrIpym6gKVoYrcT\nreSIr28B5OTHra892Ga2Dl+1OfiGKk6EY01qp/6mcC/ftY5c8bQmtoUVAoGBAOzV\n7osmoWVawbzQd/sVUTPIBNNj93QmcEYVdqz/SZreyP7NQTiydphBaHVxCwohCShh\nWuBdhxo5ogL+UTdppkzPQbQdlCFT+q0kYjQITpodlg9KlJUZ6KOCLSEF5oInz/SZ\nEx/U2EI+cPESRehJkdJgf91wRtODfZC0K/3jzcANAoGALwrsVP9oC/p7vsAeuyej\nrQAGw/u9ehxbxE8HSiF6fcAujQp/J1UlpsJXs429RZgVoDt6vR3gt4lLiIe+eIGX\nzt5lbll31C4jUP0jsiuc9qCCu4h1VzIgxd0U31Rmm0tzgjdg7MToE/JvwI19NKjA\n9AZtdQ+ZPC0CZwnqaRP21+ECgYBXO5kIYesylNIlRLfcoIZvRy4X2otLmdjix4cV\nw1YOGB76UwnB42HxRK5AC6ogSfjAidNaLrjTfQTii1/IxD4/rlsqB3cHK5J6cZtG\nRQUGmP0rlrHRlWBt0UXkEvNLX3SmSDeWEuSwyaT59lwPagGu9mJCYteDkrwOL37A\nnkarhQKBgQCeUcnWySLwmMzS3mQEYhgGz+jaabnjk961KQSiffZAiXm7jN+PbXEP\nXb8tfrDxCHXADjjTjXNN4Mayh2AAsPpmYF1ddVoYeIOgCkjPoxQwu3GKzLpAEirK\nLvgAXP/X29lu6xkCc7kkK82at1juA2np+kzB2qWr0mYrBw/Q60P5RA==\n-----END RSA PRIVATE KEY-----\n'
+        certs: '-----BEGIN CERTIFICATE-----\nMIIDnTCCAoWgAwIBAgIJAPMLXdz0EF49MA0GCSqGSIb3DQEBBQUAMD0xCzAJBgNV\nBAYTAlVTMQswCQYDVQQIEwJXQTEhMB8GA1UEChMYSW50ZXJuZXQgV2lkZ2l0cyBQ\ndHkgTHRkMB4XDTE2MDYyODA0NDQwNVoXDTE3MDYyODA0NDQwNVowPTELMAkGA1UE\nBhMCVVMxCzAJBgNVBAgTAldBMSEwHwYDVQQKExhJbnRlcm5ldCBXaWRnaXRzIFB0\neSBMdGQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDgqAgRS3LEPvNY\nAMdmFVNaMT6qF1A+lIZZdujVoIKqFeUloIyDul8Rt/wcqiiQhhr31/zSxROCdZaF\n6FY0kl7tg0HZF/z3cb+BMU5M//nlIIxkWCvGbjMQ5MyQTyK+3PTLj6/qykaLgSQq\nROECAnETrgz6yRccSNKvFvs47ccBrbY36fSyIR5Nyr1AxXFslIlS+rC0M+efxbin\n7oo3EK/xWw7LchYY7WT48Hc1uCf87ijHLi6cmdfmRwFD6e0q+l7OEzCzJXBKM0M0\npIVOTCNiIL4M+1+eGdGoHqwGGE9Lt95BKBXpFIXpwlSzSyZryDIzMmK8DkOwu4kW\nSBoL5YIRAgMBAAGjgZ8wgZwwHQYDVR0OBBYEFCDwdkUJUbMeMEvZPav1+1prbxMA\nMG0GA1UdIwRmMGSAFCDwdkUJUbMeMEvZPav1+1prbxMAoUGkPzA9MQswCQYDVQQG\nEwJVUzELMAkGA1UECBMCV0ExITAfBgNVBAoTGEludGVybmV0IFdpZGdpdHMgUHR5\nIEx0ZIIJAPMLXdz0EF49MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEB\nAEwvT0aPOA39XQfxFkADa7E4x0cdqVQg7Oavp6zbHgEfjXMDTsZyLbL6WXgBikhT\nFPLfmyf11yLe0NIiq7SsanMCYXa/+n6J0HVq0ktfzPfo5avqTzrYxscbHDcCj32J\nPS+qCA0z+P8ALuDmQ1qAZ+Hezp+p9lsdXP12rP6YOeVaJvsWwPMoP9biWb8HGpMb\nLPYrqYoZoS01MsFOsklIp5frS+ZVitlXt6LWrUrDmTtuyavCOn/nTdckfFvtYfO0\nJAEHcJyTnWlvjbmZjzFdKxyCOsKTQzdKLgz4rInc6dfPOnF07d80IWjCFFC+WRJR\njwnj5w8+Rqhr4fPrhN/lcz0=\n-----END CERTIFICATE-----\n'
