@@ -1,6 +1,6 @@
 pipeline:
   docker:
-    image: plugins/dokcer
+    image: plugins/docker
     repo: sammons/sammonsio
     dockerfile: Dockerfile
     auto_tag: true
