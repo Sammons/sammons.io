@@ -1,7 +1,8 @@
 pipeline:
   docker:
     image: plugins/docker
-    repo: sammons/sammonsio:latest
+    repo: sammons/sammonsio
     dockerfile: Dockerfile
     auto_tag: true
+    tags: latest
     secrets: [docker_username, docker_password]
