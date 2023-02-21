@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2023 Benjamin D. Sammons</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      width: 790px;
+      height: 1010px;
+      margin: auto;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    div {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      text-align: center;
+    }
+
+    #highlights {
+      padding-top: 10px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      padding-bottom: 20px;
+    }
+
+    #highlights p {
+      width: 520px;
+      vertical-align: middle;
+      padding: 8px;
+    }
+
+    #experience {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .experience-element {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 12px;
+    }
+
+    .experience-element .left {
+      width: 376px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .experience-element .right {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .experience-element p,
+    .experience-element .company {
+      padding: 1px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .experience-element .position {
+      font-style: italic;
+      width: 376px;
+    }
+
+    .experience-element .time {}
+
+    .experience-element .description {}
+
+    .experience-element .technology {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .experience-element .technology li {
+      white-space: nowrap;
+      text-align: center;
+      list-style: none;
+      padding: 3px;
+      margin: 2px;
+      background-color: lightblue;
+      border-radius: 5%;
+      font-size: xx-small;
+    }
+
+    .top-notes {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 200px;
+      height: 0;
+    }
+    .top-notes * {
+      width: 200px;
+      font-size: x-small;
+      color: grey;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      text-align: left;
+      top: -15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-notes">
+    <a>ben+webresume@sammons.io</a>
+    <p>Missouri, Fully Remote</p>
+    <a>github.com/sammons</a>
+  </div>
+
+  <h1 style="width: 100%;">
+    Benjamin D. Sammons
+  </h1>
+
+  <div id="highlights">
+    <p>
+      Passionate software engineer & team leader with experience operating under pressure, architecting, and influencing
+      business outcomes.
+    </p>
+    <p>
+      Started programming in 2012, and earned a B.S. in Computer Science from University of Missouri in 2015.
+    </p>
+  </div>
+
+  <div id="experience">
+    <div class="experience-element">
+      <div class="left">
+        <h4 class="company">Amazon (PXT)</h4>
+        <p class="position">Software Development Engineer III</p>
+        <p class="time">July 2022 - Present</p>
+        <p class="position">Software Development Engineer II</p>
+        <p class="time">July 2019 - July 2022</p>
+        <ul class="technology">
+          <li>TypeScript</li>
+          <li>Node.js</li>
+          <li>Java</li>
+          <li>Kotlin</li>
+          <li>React Native</li>
+          <li>AWS (dozens of services)</li>
+          <li>Git</li>
+          <li>Android Studio</li>
+          <li>XCode</li>
+          <li>Visual Studio Code</li>
+        </ul>
+      </div>
+      <div class="right">
+        <p class="description">Delivered multiple senior VP business
+          goals servicing over a million employees on limited timelines. Architected then implemented distributed cloud
+          services, acting as a force
+          multiplier for 14+ developers. Worked with Transfers, Login, News & Notifications, Employee Recognition.</p>
+      </div>
+    </div>
+
+    <div class="experience-element">
+      <div class="left">
+        <h4 class="company">Social Security Administration (Contract)</h4>
+        <p class="position">Senior Node.js Developer</p>
+        <p class="time">August 2017 - July 2019</p>
+        <ul class="technology">
+          <li>Node.js</li>
+          <li>Postgres</li>
+          <li>React</li>
+          <li>Apache ZooKeeper</li>
+          <li>Git</li>
+          <li>Visual Studio Code</li>
+        </ul>
+      </div>
+      <div class="right">
+        <p class="description">
+          Federal Disability Case Processing System (DCPS).
+          Interfaced with product to implement backend components. Live access to production to support customers.
+          Required Public Trust clearance.
+        </p>
+      </div>
+    </div>
+
+    <div class="experience-element">
+      <div class="left">
+        <h4 class="company">Hyperfish</h4>
+        <p class="position">Senior Software Engineer</p>
+        <p class="time">February 2016 - August 2017</p>
+        <ul class="technology">
+          <li>Node.js</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Postgres</li>
+          <li>Redis</li>
+          <li>Docker Compose</li>
+          <li>Kibana</li>
+          <li>Elasticsearch</li>
+          <li>Git</li>
+          <li>Pagerduty</li>
+          <li>Visual Studio Code</li>
+        </ul>
+      </div>
+      <div class="right">
+        <p class="description">Business Directory Analyzer with self-service experience to update missing or incorrect
+          data. Third engineer,
+          designed and built core backend components. Acquired shortly after by LiveTiles.</p>
+      </div>
+    </div>
+
+    <div class="experience-element">
+      <div class="left">
+        <h4 class="company">Dwolla</h4>
+        <p class="position">Software Engineer</p>
+        <p class="time">November 2014 - December 2015</p>
+        <ul class="technology">
+          <li>Scala</li>
+          <li>Akka</li>
+          <li>C#</li>
+          <li>Ruby</li>
+          <li>Node.js</li>
+          <li>Docker</li>
+          <li>MySQL</li>
+          <li>SQL Server</li>
+          <li>RabbitMQ</li>
+          <li>Vagrant</li>
+          <li>Git</li>
+          <li>HashiCorp Consul</li>
+          <li>Visual Studio</li>
+          <li>ReSharper</li>
+          <li>NCrunch</li>
+        </ul>
+      </div>
+      <div class="right">
+        <p class="description">
+          Instant money transfers and a white label ACH API.
+          Designed and developed Scala microservices,
+          retroactively reconciled years of financial event data.
+        </p>
+      </div>
+    </div>
+
+    <div class="experience-element">
+      <div class="left">
+        <h4 class="company">Garmin</h4>
+        <p class="position">Software Intern</p>
+        <p class="time">Summer 2014</p>
+        <ul class="technology">
+          <li>C++</li>
+          <li>Visual Studio</li>
+          <li>Python</li>
+          <li>Perl</li>
+        </ul>
+      </div>
+      <div class="right">
+        <p class="description">
+          Aviation device database team. Write and update
+          data import adapters for new vendor sources,
+          specifically to open up a new obstacle data source for
+          an entire region of North America.
+        </p>
+      </div>
+    </div>
+
+    <div class="experience-element">
+      <div class="left">
+        <h4 class="company">Trulaske College of Business</h4>
+        <p class="position">Database Developer</p>
+        <p class="time">Fall 2013 - Spring 2014</p>
+        <ul class="technology">
+          <li>PHP</li>
+          <li>JavaScript</li>
+          <li>JQuery</li>
+          <li>Git</li>
+          <li>Visual Studio</li>
+          <li>Sublime</li>
+        </ul>
+      </div>
+      <div class="right">
+        <p class="description">
+          Departmental internal web development. Help
+          maintain shared access databases backed my
+          MSSQL, and build new web apps with PHP 5.
+        </p>
+      </div>
+    </div>
+
+    <div class="experience-element">
+      <div class="left">
+        <h4 class="company">Archer Daniels Midland - Crop Risk Services</h4>
+        <p class="position">Software Intern</p>
+        <p class="time">Summer 2013</p>
+        <ul class="technology">
+          <li>Microsoft SQL</li>
+          <li>Visual Basic</li>
+        </ul>
+      </div>
+      <div class="right">
+        <p class="description">
+          Feature development on the AEROS insurance
+          platform. Added features to Citrix experience supporting iPads in the field. Emphasis on updating and building
+          new
+          complex MSSQL procedures.</p>
+      </div>
+    </div>
+
+    <div class="experience-element">
+      <div class="left">
+        <h4 class="company">iSocial</h4>
+        <p class="position">Undergraduate Assistant Game Dev</p>
+        <p class="time">Fall 2012 - Spring 2013</p>
+        <ul class="technology">
+          <li>Java</li>
+          <li>OpenWonderland</li>
+          <li>Unrealscript</li>
+        </ul>
+      </div>
+      <div class="right">
+        <p class="description">
+          Assist with developing a remote game-based
+          educational support experience for students needing
+          a special educator. Classes took place in a virtual
+          world with group exercises led by a PhD researcher.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
