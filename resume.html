@@ -37,19 +37,23 @@
     }
 
     #highlights {
-      padding-top: 10px;
+      padding-top: 8px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
       width: 100%;
-      padding-bottom: 20px;
+      padding-bottom: 8px;
     }
 
     #highlights p {
       width: 520px;
       vertical-align: middle;
       padding: 8px;
+    }
+
+    .sub-highlight {
+      font-size: 88%;
     }
 
     #experience {
@@ -73,6 +77,7 @@
 
     .experience-element .right {
       display: flex;
+      flex-direction: column;
       width: 100%;
       flex-wrap: wrap;
     }
@@ -91,24 +96,40 @@
 
     .experience-element .time {}
 
-    .experience-element .description {}
+    .experience-element .description {
+      padding-bottom: 2px;
+    }
 
-    .experience-element .technology {
+    .experience-element .technology,
+    .experience-element .traits {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
     }
 
-    .experience-element .technology li {
+    .experience-element .technology li,
+    .experience-element .traits li {
       white-space: nowrap;
       text-align: center;
       list-style: none;
-      padding: 3px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      padding-left: 6px;
+      padding-right: 6px;
       margin: 2px;
-      background-color: lightblue;
       border-radius: 5%;
       font-size: xx-small;
+      height: 12px;
     }
+
+    .experience-element .technology li {
+      background-color: lightblue;
+    }
+
+    .experience-element .traits li {
+      background-color: limegreen;
+    }
+
 
     .top-notes {
       display: flex;
@@ -117,6 +138,7 @@
       width: 200px;
       height: 0;
     }
+
     .top-notes * {
       width: 200px;
       font-size: x-small;
@@ -133,7 +155,7 @@
 <body>
 
   <div class="top-notes">
-    <a>ben+webresume@sammons.io</a>
+    <a>ben@sammons.io</a>
     <p>Missouri, Fully Remote</p>
     <a>github.com/sammons</a>
   </div>
@@ -144,18 +166,18 @@
 
   <div id="highlights">
     <p>
-      Passionate software engineer & team leader with experience operating under pressure, architecting, and influencing
-      business outcomes.
+      Passionate software engineer & leader with experience operating under pressure, architecting, and influencing
+      business outcomes
     </p>
-    <p>
-      Started programming in 2012, and earned a B.S. in Computer Science from University of Missouri in 2015.
+    <p class="sub-highlight">
+      10 years in code and B.S. in Computer Science from University of Missouri in 2015
     </p>
   </div>
 
   <div id="experience">
     <div class="experience-element">
       <div class="left">
-        <h4 class="company">Amazon (PXT)</h4>
+        <h4 class="company">Amazon</h4>
         <p class="position">Software Development Engineer III</p>
         <p class="time">July 2022 - Present</p>
         <p class="position">Software Development Engineer II</p>
@@ -170,14 +192,33 @@
           <li>Git</li>
           <li>Android Studio</li>
           <li>XCode</li>
-          <li>Visual Studio Code</li>
+          <li>VS Code</li>
+          <li>Webpack</li>
         </ul>
       </div>
       <div class="right">
-        <p class="description">Delivered multiple senior VP business
-          goals servicing over a million employees on limited timelines. Architected then implemented distributed cloud
-          services, acting as a force
-          multiplier for 14+ developers. Worked with Transfers, Login, News & Notifications, Employee Recognition.</p>
+        <p class="description">Work alongside and force multiply 14+ developers on Senior VP level goals in Amazon A to Z (PXT).
+        </p>
+        <ul class="traits">
+          <li>Agile</li>
+          <li>Fullstack</li>
+          <li>On call</li>
+          <li>Estimate Projects</li>
+          <li>Architect Cloud Services</li>
+          <li>COE Bar Raiser</li>
+          <li>Mentoring</li>
+          <li>Security</li>
+          <li>Unit Testing</li>
+          <li>UI Testing</li>
+        </ul>
+        <!-- <div>
+          - Hourly Internal Transfer Program - was off-schedule brought back on schedule
+          - Login - maintained legacy java app and improved login experience, including hybrid login mechanisms
+            + normalized authentication to use OIDC
+          - News - delivered new news platform with secure permissions on viewership at scale > 1500tps
+          - Rewards - point accumulation and reward store for hourly employees
+          - Shout-Outs - recognition platform for hourly & salaried employees
+        </div> -->
       </div>
     </div>
 
@@ -192,15 +233,31 @@
           <li>React</li>
           <li>Apache ZooKeeper</li>
           <li>Git</li>
-          <li>Visual Studio Code</li>
+          <li>VS Code</li>
+          <li>Jenkins</li>
         </ul>
       </div>
       <div class="right">
         <p class="description">
-          Federal Disability Case Processing System (DCPS).
-          Interfaced with product to implement backend components. Live access to production to support customers.
-          Required Public Trust clearance.
+          USA Federal Disability Case Processing System (DCPS). Estimated and implemented case processing backend
+          features.
         </p>
+        <ul class="traits">
+          <li>Agile</li>
+          <li>Backend</li>
+          <li>Demo to federal comittee</li>
+          <li>Union compliant work assignment</li>
+          <li>Status reports</li>
+          <li>Production support</li>
+          <li>Public Trust Clearance</li>
+          <li>Unit Testing</li>
+        </ul>
+        <!-- <div>
+          Worked on Node.js & React replacement for mainframe.
+          Tasked projects w/ product contacts and worked with QA to validate.
+          Wrote status reports weekly.
+          Designed and built a work assignment scheduler that I demoed to a federal committee.
+        </div> -->
       </div>
     </div>
 
@@ -218,15 +275,27 @@
           <li>Docker Compose</li>
           <li>Kibana</li>
           <li>Elasticsearch</li>
+          <li>Logstash</li>
           <li>Git</li>
           <li>Pagerduty</li>
-          <li>Visual Studio Code</li>
+          <li>VS Code</li>
+          <li>Microsoft Graph API</li>
         </ul>
       </div>
       <div class="right">
-        <p class="description">Business Directory Analyzer with self-service experience to update missing or incorrect
-          data. Third engineer,
-          designed and built core backend components. Acquired shortly after by LiveTiles.</p>
+        <p class="description">
+          Private equity startup (acquired 2018) building a Business Directory Analyzer with a self-service update interface.
+          Built backend and synchronization with on-prem agents.
+        </p>
+        <ul class="traits">
+          <li>Agile</li>
+          <li>Fullstack</li>
+          <li>Startup</li>
+          <li>Third engineer</li>
+          <li>On call</li>
+          <li>Microservices</li>
+          <li>Architect Cloud Services</li>
+        </ul>
       </div>
     </div>
 
@@ -246,19 +315,27 @@
           <li>SQL Server</li>
           <li>RabbitMQ</li>
           <li>Vagrant</li>
-          <li>Git</li>
           <li>HashiCorp Consul</li>
+          <li>Git</li>
           <li>Visual Studio</li>
           <li>ReSharper</li>
-          <li>NCrunch</li>
         </ul>
       </div>
       <div class="right">
         <p class="description">
-          Instant money transfers and a white label ACH API.
-          Designed and developed Scala microservices,
-          retroactively reconciled years of financial event data.
+          Money transfers with a white label ACH API. 
+          Built Scala microservices focused on automated reconciliation and reconstruction of historic financial event data.
         </p>
+        <ul class="traits">
+          <li>Agile</li>
+          <li>Fullstack</li>
+          <li>Startup</li>
+          <li>FinTech</li>
+          <li>Domain Driven Design</li>
+          <li>Functional Programming</li>
+          <li>Microservices</li>
+          <li>Unit Testing</li>
+        </ul>
       </div>
     </div>
 
@@ -276,11 +353,13 @@
       </div>
       <div class="right">
         <p class="description">
-          Aviation device database team. Write and update
-          data import adapters for new vendor sources,
-          specifically to open up a new obstacle data source for
-          an entire region of North America.
+          Aviation device database team.
+          Built vendor data adapters to release aviation map features in new countries.
         </p>
+        <ul class="traits">
+          <li>Agile</li>
+          <li>ETL</li>
+        </ul>
       </div>
     </div>
 
@@ -291,19 +370,24 @@
         <p class="time">Fall 2013 - Spring 2014</p>
         <ul class="technology">
           <li>PHP</li>
+          <li>C#</li>
           <li>JavaScript</li>
           <li>JQuery</li>
           <li>Git</li>
           <li>Visual Studio</li>
           <li>Sublime</li>
+          <li>LDAP</li>
         </ul>
       </div>
       <div class="right">
         <p class="description">
-          Departmental internal web development. Help
-          maintain shared access databases backed my
-          MSSQL, and build new web apps with PHP 5.
+          Mizzou Business Department.
+          Maintained MSSQL databases and built an inventory management web app for the IT Director.
         </p>
+        <ul class="traits">
+          <li>Fullstack</li>
+          <li>Security</li>
+        </ul>
       </div>
     </div>
 
@@ -313,16 +397,21 @@
         <p class="position">Software Intern</p>
         <p class="time">Summer 2013</p>
         <ul class="technology">
-          <li>Microsoft SQL</li>
+          <li>MS SQL</li>
+          <li>MS Team Foundation Server</li>
           <li>Visual Basic</li>
+          <li>Visual Studio</li>
         </ul>
       </div>
       <div class="right">
         <p class="description">
-          Feature development on the AEROS insurance
-          platform. Added features to Citrix experience supporting iPads in the field. Emphasis on updating and building
-          new
-          complex MSSQL procedures.</p>
+          CRS insurance's AEROS platform innovated bringing iPads to the field.
+          Wrote features for adjusters including complex >1000 line MS SQL procedures.
+        </p>
+        <ul class="traits">
+          <li>Backend</li>
+          <li>Test Scripts</li>
+        </ul>
       </div>
     </div>
 
@@ -335,14 +424,17 @@
           <li>Java</li>
           <li>OpenWonderland</li>
           <li>Unrealscript</li>
+          <li>Visual Studio</li>
         </ul>
       </div>
       <div class="right">
         <p class="description">
-          Assist with developing a remote game-based
-          educational support experience for students needing
-          a special educator. Classes took place in a virtual
-          world with group exercises led by a PhD researcher.</p>
+          iSocial researched remote game-based educational support for students needing a special educator.
+          Prototyped experimental game modules for the Team
+        </p>
+        <ul class="traits">
+          <li>Game Development</li>
+        </ul>
       </div>
     </div>
   </div>
