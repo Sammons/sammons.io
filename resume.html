@@ -66,7 +66,7 @@
       width: 100%;
       display: flex;
       flex-direction: row;
-      padding-bottom: 12px;
+      padding-bottom: 16px;
     }
 
     .experience-element .left {
@@ -91,10 +91,15 @@
 
     .experience-element .position {
       font-style: italic;
+    }
+
+    .experience-element .company {
       width: 376px;
     }
 
-    .experience-element .time {}
+    .experience-element .time {
+      font-size: 90%;
+    }
 
     .experience-element .description {
       padding-bottom: 2px;
@@ -106,6 +111,7 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      width: 376px;
     }
 
     .experience-element .technology li,
@@ -150,6 +156,12 @@
       text-align: left;
       top: -15px;
     }
+
+    .pic {
+      height: 0;
+      position: absolute;
+      right: 32px;
+    }
   </style>
 </head>
 
@@ -165,6 +177,11 @@
     Benjamin D. Sammons
   </h1>
 
+
+  <div class="pic">
+    <img src="./prof5.png" width="90"></img>
+  </div>
+
   <div id="highlights">
     <p>
       Passionate software engineer & leader with experience operating under pressure, architecting, and influencing
@@ -179,10 +196,12 @@
     <div class="experience-element">
       <div class="left">
         <h4 class="company">Amazon</h4>
+        <p class="time">July 2021 - Present </p>
+        <p class="time">July 2019 - July 2021 (SDE II)</p>
+        <p class="description">Work alongside and force multiply 14+ developers on Senior VP level goals in Amazon A to Z (PXT).</p>
+      </div>
+      <div class="right">
         <p class="position">Software Development Engineer III</p>
-        <p class="time">July 2022 - Present</p>
-        <p class="position">Software Development Engineer II</p>
-        <p class="time">July 2019 - July 2022</p>
         <ul class="technology">
           <li>TypeScript</li>
           <li>Node.js</li>
@@ -196,10 +215,6 @@
           <li>VS Code</li>
           <li>Webpack</li>
         </ul>
-      </div>
-      <div class="right">
-        <p class="description">Work alongside and force multiply 14+ developers on Senior VP level goals in Amazon A to Z (PXT).
-        </p>
         <ul class="traits">
           <li>Agile</li>
           <li>Fullstack</li>
@@ -226,8 +241,15 @@
     <div class="experience-element">
       <div class="left">
         <h4 class="company">Social Security Administration (Contract)</h4>
-        <p class="position">Senior Node.js Developer</p>
+        
         <p class="time">August 2017 - July 2019</p>
+        <p class="description">
+          USA Federal Disability Case Processing System (DCPS). Estimated and implemented case processing backend
+          features.
+        </p>
+      </div>
+      <div class="right">
+        <p class="position">Senior Node.js Developer</p>
         <ul class="technology">
           <li>Node.js</li>
           <li>Postgres</li>
@@ -237,12 +259,6 @@
           <li>VS Code</li>
           <li>Jenkins</li>
         </ul>
-      </div>
-      <div class="right">
-        <p class="description">
-          USA Federal Disability Case Processing System (DCPS). Estimated and implemented case processing backend
-          features.
-        </p>
         <ul class="traits">
           <li>Agile</li>
           <li>Backend</li>
@@ -265,8 +281,15 @@
     <div class="experience-element">
       <div class="left">
         <h4 class="company">Hyperfish</h4>
-        <p class="position">Senior Software Engineer</p>
+        
         <p class="time">February 2016 - August 2017</p>
+        <p class="description">
+          Private equity startup (acquired 2018) that innovated an AD analyzer offering employees self-service updates.
+          Built backend which synchronized to AD on-prem.
+        </p>
+      </div>
+      <div class="right">
+        <p class="position">Senior Software Engineer</p>
         <ul class="technology">
           <li>Node.js</li>
           <li>TypeScript</li>
@@ -282,12 +305,6 @@
           <li>VS Code</li>
           <li>Microsoft Graph API</li>
         </ul>
-      </div>
-      <div class="right">
-        <p class="description">
-          Private equity startup (acquired 2018) that innovated a Business Directory Analyzer with a self-service update interface.
-          Built backend and synchronization with on-prem agents.
-        </p>
         <ul class="traits">
           <li>Agile</li>
           <li>Fullstack</li>
@@ -303,8 +320,15 @@
     <div class="experience-element">
       <div class="left">
         <h4 class="company">Dwolla</h4>
-        <p class="position">Software Engineer</p>
+        
         <p class="time">November 2014 - December 2015</p>
+        <p class="description">
+          VC FinTech Startup with p2p transfers and a white label ACH API. 
+          Built Scala microservices focused on reconciliation of historic financial event data.
+        </p>
+      </div>
+      <div class="right">
+        <p class="position">Software Engineer</p>
         <ul class="technology">
           <li>Scala</li>
           <li>Akka</li>
@@ -321,12 +345,6 @@
           <li>Visual Studio</li>
           <li>ReSharper</li>
         </ul>
-      </div>
-      <div class="right">
-        <p class="description">
-          VC FinTech Startup with p2p transfers and a white label ACH API. 
-          Built Scala microservices focused on automated reconciliation and reconstruction of historic financial event data.
-        </p>
         <ul class="traits">
           <li>Agile</li>
           <li>Fullstack</li>
@@ -343,20 +361,20 @@
     <div class="experience-element">
       <div class="left">
         <h4 class="company">Garmin</h4>
-        <p class="position">Software Intern</p>
         <p class="time">Summer 2014</p>
+        <p class="description">
+          Aviation device database team that packed map data.
+          Crafted vendor data adapters to release aviation features in new countries.
+        </p>
+      </div>
+      <div class="right">
+        <p class="position">Software Intern</p>
         <ul class="technology">
           <li>C++</li>
           <li>Visual Studio</li>
           <li>Python</li>
           <li>Perl</li>
         </ul>
-      </div>
-      <div class="right">
-        <p class="description">
-          Aviation device database team that packed map data.
-          Crafted vendor data adapters to release aviation map features in new countries.
-        </p>
         <ul class="traits">
           <li>Agile</li>
           <li>ETL</li>
@@ -367,8 +385,14 @@
     <div class="experience-element">
       <div class="left">
         <h4 class="company">Trulaske College of Business</h4>
-        <p class="position">Database Developer</p>
         <p class="time">Fall 2013 - Spring 2014</p>
+        <p class="description">
+          University of Missouri Business Department.
+          Maintained MSSQL databases and built an inventory management web app for the IT Director.
+        </p>
+      </div>
+      <div class="right">
+        <p class="position">Database Developer</p>
         <ul class="technology">
           <li>PHP</li>
           <li>C#</li>
@@ -379,12 +403,6 @@
           <li>Sublime</li>
           <li>LDAP</li>
         </ul>
-      </div>
-      <div class="right">
-        <p class="description">
-          University of Missouri Business Department.
-          Maintained MSSQL databases and built an inventory management web app for the IT Director.
-        </p>
         <ul class="traits">
           <li>Fullstack</li>
           <li>Security</li>
@@ -395,20 +413,21 @@
     <div class="experience-element">
       <div class="left">
         <h4 class="company">Archer Daniels Midland - Crop Risk Services</h4>
-        <p class="position">Software Intern</p>
         <p class="time">Summer 2013</p>
+        <p class="description">
+          Insurance platform that brought software signing to the field.
+          Wrote features for insurance adjusters.
+        </p>
+        
+      </div>
+      <div class="right">
+        <p class="position">Software Intern</p>
         <ul class="technology">
           <li>MS SQL</li>
           <li>MS Team Foundation Server</li>
           <li>Visual Basic</li>
           <li>Visual Studio</li>
         </ul>
-      </div>
-      <div class="right">
-        <p class="description">
-          Insurance platform that innovated bringing iPads to the field.
-          Wrote features for adjusters including complex >1000 line MS SQL procedures.
-        </p>
         <ul class="traits">
           <li>Backend</li>
           <li>Test Scripts</li>
@@ -419,20 +438,22 @@
     <div class="experience-element">
       <div class="left">
         <h4 class="company">iSocial</h4>
-        <p class="position">Undergraduate Assistant Game Dev</p>
+        
         <p class="time">Fall 2012 - Spring 2013</p>
+        <p class="description">
+          iSocial studied game-based classes for remote students needing a special educator.
+          Prototyped game code.
+        </p>
+
+      </div>
+      <div class="right">
+        <p class="position">Undergraduate Assistant Game Dev</p>
         <ul class="technology">
           <li>Java</li>
           <li>OpenWonderland</li>
           <li>Unrealscript</li>
           <li>Visual Studio</li>
         </ul>
-      </div>
-      <div class="right">
-        <p class="description">
-          Research project that studied game-based classes for remote students needing a special educator.
-          Prototyped experimental game modules for the team.
-        </p>
         <ul class="traits">
           <li>Game Development</li>
         </ul>
