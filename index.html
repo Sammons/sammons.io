@@ -34,9 +34,17 @@
     <meta property="twitter:image" content="prof3.jpg">
     <meta name="pubdate" content="20181101">
     <style defer>
+        :root {
+            --primary-color: #2D3748;
+            --accent-color: #4299E1;
+            --background-color: #FFFFFF;
+            --text-color: #4A5568;
+            --hover-color: #2B6CB0;
+        }
+
         @font-face {
             font-family: 'Inter UI';
-            font-style:  normal;
+            font-style: normal;
             font-weight: 400;
             src: url("Inter-UI-Regular.woff2") format("woff2"),
                 url("Inter-UI-Regular.woff") format("woff");
@@ -44,149 +52,171 @@
 
         @media only screen and (max-width: 600px) {
             .statement {
-                width: 380px;
+                width: 90%;
+                margin: auto;
             }
 
             .top-menu-stuff {
-                padding-top: 00px;
-                width: 380px;
+                width: 100%;
                 text-align: center;
-            }
-
-            .top-menu-stuff>ul {
-                padding-left: 0px;
+                padding-top: 20px;
+                padding: 20px 10px; /* Add horizontal padding */
             }
 
             .links {
-                position: static;
-                padding-left: 0px;
-                left: 0px;
-            }
-
-            .portrait-container {
-                width: 75px;
-                height: 75px;
-            }
-
-            .content {
-                padding-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+                padding: 0;
+                list-style: none;
             }
         }
 
         @media only screen and (min-width: 600px) {
-
             .content,
             .top-menu-stuff {
-                width: 520px;
-            }
-
-            .content {
-                padding-bottom: 30px;
+                width: 650px;
+                max-width: 650px; /* Change width to max-width */
             }
 
             .links {
-                position: relative;
-                left: 60px;
-            }
-
-            .portrait-container {
-                width: 150px;
-                height: 150px;
+                display: flex;
+                justify-content: center;
+                gap: 25px;
+                margin-top: 20px;
+                list-style: none;
+                padding: 0;
             }
         }
 
         .portrait-container {
-            padding: 0px;
-            margin: auto;
-            margin-top: 50px;
+            width: 150px;
+            height: 150px;
+            margin: 50px auto;
             background-image: url("prof3.jpg");
             background-size: cover;
-            background-position-y: 0px;
-            border-radius: 60%;
-            /*border: 2px solid #998c8c;*/
-            box-shadow: 3px 3px 9px 1px #998c8c;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .portrait-container:hover {
+            transform: scale(1.05);
         }
 
         body {
-            color: #444444;
-            background-color: white;
-            font-family: Inter UI;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            font-family: 'Inter UI', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
         }
 
         .content {
             margin: auto;
-        }
-
-        .top-menu-stuff {
-            padding-top: 40px;
-            margin: auto;
-        }
-
-        .links {
-            display: inline-block;
-        }
-
-        .links>li {
-            display: inline-block;
-            vertical-align: middle;
+            max-width: 100%;
         }
 
         .name {
-            display: inline-block;
+            font-size: 2em;
+            margin: 0 0 20px 0; /* Adjust margin */
+            color: var(--primary-color);
             text-align: center;
         }
 
         .hello {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
-        .statement {
-            text-justify: inter-word;
-            text-align: justify;
+        .hello h2 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin: 0;
         }
 
-        a:visited {
-            color: #998c8c;
-        }
-
-        a:hover {
-            color: #1516EF;
-            cursor: pointer;
+        .statement p {
+            margin-bottom: 1.5em;
         }
 
         a {
+            color: var(--accent-color);
             text-decoration: none;
-            font-family: Inter UI;
-            letter-spacing: 1px;
-            line-height: 1.5em;
+            transition: color 0.2s ease;
+            position: relative;
         }
 
-        h3 {
-            font-family: Inter UI;
-            color: #333333;
-            letter-spacing: 1px;
-            line-height: 1.5em;
+        a:hover {
+            color: var(--hover-color);
         }
 
-        p {
-            font-family: Inter UI;
-            color: #444444;
-            letter-spacing: 1px;
-            line-height: 1.5em;
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--hover-color);
+            transform: scaleX(0);
+            transition: transform 0.2s ease;
+        }
+
+        a:hover::after {
+            transform: scaleX(1);
         }
 
         .stupid-footer-that-should-not-need-to-exist {
-            margin: auto;
-            text-align: center;
-            vertical-align: bottom;
-            color: #DDD;
-            margin-bottom: 0px;
             position: fixed;
-            z-index: 2;
-            background-color: #EDFCFE;
-            border-radius: 2px;
             bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            text-align: center;
+            font-size: 0.9em;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .top-menu-stuff {
+            text-align: center;
+            padding: 20px 0;
+            margin: 0 auto; /* Add this */
+        }
+
+        .links {
+            list-style: none;
+            margin: 0 auto; /* Add this */
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            width: fit-content; /* Add this */
+        }
+
+        .links li {
+            padding: 5px 0;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .top-menu-stuff {
+                width: 100%;
+            }
+            
+            .links {
+                gap: 15px;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            .top-menu-stuff {
+                width: 650px;
+            }
         }
     </style>
 </head>
@@ -196,15 +226,8 @@
         <h3 class="name">Ben Sammons</h3>
         <ul class="links">
             <li><a href="https://github.com/sammons">Code</a></li>
-            <li></li>
-            <li></li>
-            <!-- <li><a href="https://write.as/sammons/">Blog</a></li> -->
             <li><a href="https://sammons.io/resume-2025.pdf">Resume</a></li>
-            <li></li>
-            <li></li>
             <li><a href="mailto:ben+web@sammons.io">Email</a></li>
-            <li></li>
-            <li></li>
             <li><a href="https://www.linkedin.com/in/benjamin-sammons-228bb159/">LinkedIn</a></li>
         </ul>
     </div>
