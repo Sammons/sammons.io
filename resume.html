@@ -10,10 +10,12 @@
     body {
       display: flex;
       flex-direction: column;
-      width: 790px;
-      /* height: 1010px; */
-      margin: auto;
-      margin-top: 50px;
+      /* Change width to match 8.5" at 96 DPI, subtracting margins */
+      width: 750px;
+      /* Set page margins */
+      margin: 40px auto;
+      /* Reduce top margin */
+      margin-top: 30px;
       margin-left: 32px;
       margin-right: 32px;
       padding-bottom: 0px;
@@ -40,13 +42,13 @@
     }
 
     #highlights {
-      padding-top: 8px;
+      padding-top: 6px;  /* Reduce from 8px */
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
       width: 100%;
-      padding-bottom: 6px;
+      padding-bottom: 4px; /* Reduce from 6px */
     }
 
     #highlights p {
@@ -69,7 +71,7 @@
       width: 100%;
       display: flex;
       flex-direction: row;
-      padding-bottom: 8px;
+      padding-bottom: 6px; /* Reduce from 8px */
     }
 
     .experience-element .left {
@@ -106,7 +108,8 @@
 
     .experience-element .description {
       padding-bottom: 2px;
-      font-size: 90%;
+      font-size: 85%;    /* Slightly smaller than 90% */
+      line-height: 1.2;  /* Tighter line height */
     }
 
     .experience-element .technology,
@@ -122,14 +125,11 @@
       white-space: nowrap;
       text-align: center;
       list-style: none;
-      padding-top: 2px;
-      padding-bottom: 2px;
-      padding-left: 3px;
-      padding-right: 3px;
-      margin: 2px;
+      padding: 1px 2px;  /* Reduce padding */
+      margin: 1px;       /* Reduce margin */
       border-radius: 5%;
-      font-size: xx-small;
-      height: 11px;
+      font-size: 9px;    /* Slightly smaller font */
+      height: 10px;      /* Reduce height */
     }
 
     .experience-element .technology li {
@@ -188,11 +188,11 @@
 
   <div id="highlights">
     <p>
-      Passionate software engineer & leader with experience operating under pressure, architecting, and influencing
+      Passionate software engineer & leader with experience operating under pressure, architecting, and delivering
       business outcomes
     </p>
     <p class="sub-highlight">
-      10 years in code and B.S. in Computer Science from University of Missouri in 2015
+      10 years in code and B.S. in Computer Science from University of Missouri from 2015
     </p>
   </div>
 
@@ -200,9 +200,9 @@
     <div class="experience-element">
       <div class="left">
         <h4 class="company">Amazon</h4>
-        <p class="time">July 2021 - Present </p>
+        <p class="time">July 2021 - Present (SDE III) </p>
         <p class="time">July 2019 - July 2021 (SDE II)</p>
-        <p class="description">Work alongside and force multiply 14+ developers on Senior VP level goals in Amazon A to Z (PXT).</p>
+        <p class="description">E-Commerce Giant. Architected and led teams to deliver recognition and engagement products worth over $50 million in annual recurring returns. Invented new agentic GenAI offerings internally providing scientifically proven productivity boosts.</p>
       </div>
       <div class="right">
         <p class="position">Software Development Engineer III</p>
@@ -211,11 +211,12 @@
           <li>Node.js</li>
           <li>Java</li>
           <li>Kotlin</li>
+          <li>React</li>
           <li>React Native</li>
           <li>AWS (dozens of services)</li>
           <li>Git</li>
-          <li>Android Studio</li>
-          <li>XCode</li>
+          <li>Claude 3.5 Sonnet</li>
+          <li>Prompt Engineering</li>
           <li>VS Code</li>
           <li>Webpack</li>
         </ul>
